@@ -48,12 +48,12 @@ p {
 
 }
 
-
+/* Not showing up */
 .response {
 
 	font-family: 'belgrano';
 	color: rgb(44, 45, 44);
-	font-weight: 1.5rem;
+	font-weight: 1.8rem;
 
 }
 
@@ -83,12 +83,12 @@ sup {
 strong {
 
 	font-style: bold;
-	color: black;
+	color: ;
 
 }
 
-
-aside {
+/* Repoonse style not showing up */
+aside.response {
 
 	font-family: 'belgrano';
 	font-weight: 1.8rem;
