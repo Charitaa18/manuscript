@@ -48,6 +48,7 @@ p {
 
 }
 
+
 /* Not showing up */
 .response {
 
@@ -79,13 +80,15 @@ sup {
 
 }
 
+
 /* Strong not showing up */
 strong {
 
 	font-style: bold;
-	color: ;
+	color:purple;
 
 }
+
 
 /* Repoonse style not showing up */
 aside.response {
