@@ -1,1 +1,11 @@
-body {}
+body {
+	color:tomato;
+}
+
+p { color: maroon;}
+
+.references
+ {
+	color: black;
+	font-weight: 400;
+ }
