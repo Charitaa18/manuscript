@@ -41,11 +41,8 @@ a {
 
 
 p {
-
-	color: rgb(8, 17, 76);
 	margin-top: 1rem;
 	margin-bottom: 1.5rem;
-
 }
 
 
@@ -86,16 +83,6 @@ strong {
 
 	font-style: bold;
 	color:purple;
-
-}
-
-
-/* Repoonse style not showing up */
-aside.response {
-
-	font-family: 'belgrano';
-	font-weight: 1.8rem;
-	color: rgb(23, 87, 157);
 
 }
 
