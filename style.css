@@ -1,8 +1,31 @@
 body {
-	color:tomato;
+
+	background-color: bisque;
+	color:rgb(12, 14, 83);
+	font-family: 'belgrano';
+	font-size: 1.3rem;
+	padding: 3rem;
+	margin-block-start: 1rem;
+
 }
 
-p { color: maroon;}
+h1 {
+
+	font-family:'lora,georgia';
+	color:rgb(45, 42, 199);
+	font-weight: 800;
+	font-size: 2.5rem;
+}
+
+p { color: rgb(8, 17, 76);}
+
+.response {
+
+	color: rgb(1, 19, 216);
+	font-family: 'opensans';
+	font-weight: 1.5rem;
+
+}
 
 .references
  {
