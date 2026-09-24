@@ -6,29 +6,97 @@ body {
 	font-size: 1.3rem;
 	padding: 3rem;
 	margin-block-start: 1rem;
+	line-height: 1.4rem;
 
 }
+
 
 h1 {
 
 	font-family:'lora,georgia';
-	color:rgb(45, 42, 199);
+	color:rgb(42, 123, 199);
 	font-weight: 800;
 	font-size: 2.5rem;
+	margin-bottom: 1rem;
+
 }
 
-p { color: rgb(8, 17, 76);}
+
+h2, h3 {
+
+	font-family:'lora';
+	color: rgb(42, 123 , 199);
+	font-weight: 600rem;
+	font-size: 1.8rem;
+
+}
+
+a {
+
+	color: cadetblue;
+	text-decoration: underline;
+
+
+}
+
+p {
+
+	color: rgb(8, 17, 76);
+	margin-top: 1rem;
+	margin-bottom: 1.5rem;
+
+}
+
 
 .response {
 
-	color: rgb(1, 19, 216);
+	font-family: 'belgrano';
+	color: rgb(1, 216, 123);
 	font-family: 'opensans';
 	font-weight: 1.5rem;
 
 }
 
-.references
- {
+
+ul {
+
+	list-style-type: disc;
+
+}
+
+
+em, cite {
+
+	font-style: italic;
+
+}
+
+
+sup {
+
+	font-size: 0.8rem;
+	vertical-align: super;
+
+}
+
+
+strong {
+
+	font-weight: 500rem;
+	font-style: bold;
+
+}
+
+
+link {
+
+
+
+}
+
+
+.references {
+
 	color: black;
 	font-weight: 400;
  }
