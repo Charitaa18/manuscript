@@ -1,8 +1,7 @@
 body {
 
-	background-color: bisque;
-	color:rgb(12, 14, 83);
-	font-family: 'belgrano';
+	background-color: rgb(0, 0, 0);
+	color:rgb(255, 255, 255);
 	font-size: 1.3rem;
 	padding: 3rem;
 	margin-block-start: 1rem;
@@ -14,10 +13,10 @@ body {
 h1 {
 
 	font-family:'lora,georgia';
-	color:rgb(13, 96, 123);
+	color:rgb(23, 150, 193);
 	font-weight: 800;
 	font-size: 2.5rem;
-	margin-bottom: 1rem;
+	margin-bottom: 1.5rem;
 
 }
 
@@ -25,7 +24,7 @@ h1 {
 h2, h3 {
 
 	font-family:'lora';
-	color: rgb(13, 96, 123);
+	color:rgb(23, 150, 193);
 	font-weight: 600rem;
 	font-size: 1.8rem;
 
@@ -34,24 +33,34 @@ h2, h3 {
 
 a {
 
-	color: cadetblue;
+	color: rgb(161, 201, 203);
 	text-decoration: underline;
 
 }
 
 
 p {
+	font-family: 'belgrano';
 	margin-top: 1rem;
 	margin-bottom: 1.5rem;
 }
 
 
-/* Not showing up */
+/* Figure out which font would contrast the type of the book best!*/
 .response {
 
-	font-family: 'belgrano';
-	color: rgb(44, 45, 44);
+	font-family: 'architects daughter';
+	color: rgb(141, 197, 228);
 	font-weight: 1.8rem;
+
+}
+
+
+.prologue {
+
+	font-family: 'belgrano';
+	font-weight: 300;
+	color: rgb(169, 169, 169);
 
 }
 
@@ -71,10 +80,11 @@ strong {
 
 }
 
+
 /* Check demo on how to appl style to everything but cite and sup */
 .reference {
 
-	color: rgb(10, 116, 151);
+	color: rgb(181, 208, 216);
 	font-style: bold;
 	font-weight: 800;
 
