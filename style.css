@@ -63,21 +63,6 @@ ul {
 }
 
 
-em, cite {
-
-	font-style: italic;
-
-}
-
-
-sup {
-
-	font-size: 0.8rem;
-	vertical-align: super;
-
-}
-
-
 /* Strong not showing up */
 strong {
 
@@ -86,10 +71,28 @@ strong {
 
 }
 
-
+/* Check demo on how to appl style to everything but cite and sup */
 .reference {
 
-	color: black;
-	font-weight: 400;
+	color: rgb(10, 116, 151);
+	font-style: bold;
+	font-weight: 800;
 
  }
+
+
+ em, cite {
+
+	font-style: italic;
+	font-weight: 400;
+
+}
+
+
+sup {
+
+	font-size: 0.8rem;
+	vertical-align: super;
+	font-weight: 400;
+
+}
