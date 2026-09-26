@@ -1,0 +1,21 @@
+body {
+
+	background-color: rgb(0, 0, 0);
+
+}
+
+/* Check if theres an order to be followed before moving forward!!  */
+/* Put in actual values for cap height, base spacing, margins */
+/* Look up how to make the text centre-aligned */
+:root {
+
+--primarycolour:rgb(106, 167, 205);
+--fontsize: 1.5rem;
+--line-height: 2rem;
+--padding: 3rem;
+--cap-height:1rem;
+--margin-block-start: 1rem;
+--margin-block-end: 5rem;
+--base-spacing:1rem;
+
+}
