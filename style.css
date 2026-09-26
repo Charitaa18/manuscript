@@ -1,7 +1,7 @@
 body {
 
 	background-color: rgb(0, 0, 0);
-	color:rgb(255, 255, 255);
+	color:rgb(219, 219, 219);
 	font-size: 1.3rem;
 	padding: 3rem;
 	margin-block-start: 1rem;
@@ -26,9 +26,16 @@ h2, h3 {
 	font-family:'lora';
 	color:rgb(23, 150, 193);
 	font-weight: 600rem;
-	font-size: 1.8rem;
+	font-size: 2rem;
 	margin-block-end: 1.5rem;
 	margin-block-start: 3rem;
+
+}
+
+
+h3 {
+
+font-size: 1.5rem;
 
 }
 
@@ -66,6 +73,17 @@ p {
 	color: rgb(141, 197, 228);
 	font-weight: 1.8rem;
 	margin-inline-start: 4rem;
+	margin-inline-end: 5rem;
+
+}
+
+.response2 {
+
+	font-family: 'kalam';
+	color: rgb(141, 197, 228);
+	/* Font weight makes no difference?? */
+	font-weight: 1.5rem;
+	margin-inline-start: 1rem;
 	margin-inline-end: 5rem;
 
 }
@@ -112,6 +130,7 @@ strong {
 
 	font-style: italic;
 	font-weight: 400;
+	font-size: 1rem;
 
 }
 
