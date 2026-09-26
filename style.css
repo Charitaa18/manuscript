@@ -27,6 +27,8 @@ h2, h3 {
 	color:rgb(23, 150, 193);
 	font-weight: 600rem;
 	font-size: 1.8rem;
+	margin-block-end: 1.5rem;
+	margin-block-start: 3rem;
 
 }
 
@@ -40,9 +42,12 @@ a {
 
 
 p {
-	font-family: 'belgrano';
+	font-family: 'montserrat';
 	margin-top: 1rem;
 	margin-bottom: 1.5rem;
+	margin-inline-start: 1rem;
+	margin-inline-end: 80rem;
+
 }
 
 
@@ -54,11 +59,20 @@ p {
 	font-weight: 1.8rem;
 
 }
+/* Option 2 */
+.response {
 
+	font-family: 'kalam';
+	color: rgb(141, 197, 228);
+	font-weight: 1.8rem;
+	margin-inline-start: 2rem;
+	margin-inline-end: 50rem;
+
+}
 
 .prologue {
 
-	font-family: 'belgrano';
+	font-family: 'montserrat';
 	font-weight: 300;
 	color: rgb(169, 169, 169);
 
@@ -68,6 +82,7 @@ p {
 ul {
 
 	list-style-type: disc;
+	font-family: 'montserrat';
 
 }
 
@@ -86,7 +101,7 @@ strong {
 
 	color: rgb(181, 208, 216);
 	font-style: bold;
-	font-weight: 800;
+	font-weight: 700;
 
  }
 
