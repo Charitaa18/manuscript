@@ -12,7 +12,7 @@ body {
 
 h1 {
 
-	font-family:'lora,georgia';
+	font-family:'lora','georgia';
 	color:rgb(23, 150, 193);
 	font-weight: 800;
 	font-size: 4rem;
@@ -77,11 +77,10 @@ p {
 
 }
 
-.response2 {
+.finalresponse p {
 
 	font-family: 'kalam';
 	color: rgb(74, 135, 168);
-	/* Font weight makes no difference?? */
 	font-weight: 1.5rem;
 	margin-inline-start: 1rem;
 	margin-inline-end: 5rem;
