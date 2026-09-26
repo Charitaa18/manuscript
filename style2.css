@@ -1,12 +1,11 @@
 body {
 
-	background-color: rgb(0, 0, 0);
-	color:rgb(219, 219, 219);
+	background-color: rgb(237, 247, 246);
+	color:rgb(71, 95, 139);
 	font-size: 1.2rem;
 	padding: 3rem;
 	margin-block-start: 1rem;
-	/* <sup> is making the line height look uneven! Look up */
-	line-height: 1.5rem;
+	line-height: 1.8rem;
 
 }
 
@@ -24,7 +23,7 @@ h1 {
 
 h2, h3 {
 
-	font-family:'lora';
+	font-family:'montserrat';
 	color:rgb(23, 150, 193);
 	font-weight: 600rem;
 	font-size: 2rem;
@@ -43,7 +42,7 @@ font-size: 1.5rem;
 
 a {
 
-	color: rgb(161, 201, 203);
+	color: rgb(31, 131, 136);
 	text-decoration: underline;
 
 }
@@ -54,7 +53,7 @@ p {
 	margin-top: 1rem;
 	margin-bottom: 1.5rem;
 	margin-inline-start: 1rem;
-	margin-inline-end: 10rem;
+	margin-inline-end: 6rem;
 
 }
 
@@ -63,25 +62,25 @@ p {
 .response {
 
 	font-family: 'architects daughter';
-	color: rgb(141, 197, 228);
+	color: rgb(4, 78, 112);
 	font-weight: 1.8rem;
 
 }
 /* Option 2 */
 .response {
 
-	font-family: 'kalam';
-	color: rgb(141, 197, 228);
+	font-family: 'architects daughter';
+	color: rgb(83, 147, 182);
 	font-weight: 1.8rem;
-	margin-inline-start: 4rem;
-	margin-inline-end: 5rem;
+	margin-inline-start: 2rem;
+	margin-inline-end: 4rem;
 
 }
 
 .response2 {
 
 	font-family: 'kalam';
-	color: rgb(141, 197, 228);
+	color: rgb(74, 135, 168);
 	/* Font weight makes no difference?? */
 	font-weight: 1.5rem;
 	margin-inline-start: 1rem;
@@ -92,8 +91,8 @@ p {
 .prologue {
 
 	font-family: 'montserrat';
-	font-weight: 300;
-	color: rgb(169, 169, 169);
+	font-weight: 350;
+	color: rgb(35, 75, 121);
 	font-size: 1rem;
 
 }
@@ -112,7 +111,7 @@ ul {
 strong {
 
 	font-style: bold;
-	color:rgb(87, 28, 182);
+	color:rgb(61, 28, 182);
 
 }
 
@@ -120,7 +119,7 @@ strong {
 /* Check demo on how to appl style to everything but cite and sup */
 .reference {
 
-	color: rgb(181, 208, 216);
+	color: rgb(128, 134, 141);
 	font-style: bold;
 	font-weight: 700;
 
@@ -131,7 +130,7 @@ strong {
 
 	font-style: italic;
 	font-weight: 400;
-	font-size: 1rem;
+	font-size: 1.2rem;
 
 }
 
