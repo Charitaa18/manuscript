@@ -105,6 +105,11 @@ ul {
 
 }
 
+ol {
+
+list-style-type: none;
+
+}
 
 /* Strong not showing up */
 strong {

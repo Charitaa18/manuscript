@@ -6,7 +6,8 @@ body {
 	padding: 3rem;
 	margin-block-start: 1rem;
 	/* <sup> is making the line height look uneven! Look up */
-	line-height: 1.5rem;
+	line-height: 1.8rem;
+	font-family: 'montserrat';
 
 }
 
@@ -50,7 +51,7 @@ a {
 
 
 p {
-	font-family: 'montserrat';
+
 	margin-top: 1rem;
 	margin-bottom: 1.5rem;
 	margin-inline-start: 1rem;
@@ -78,14 +79,21 @@ p {
 
 }
 
-.response2 {
+.response {
 
 	font-family: 'kalam';
 	color: rgb(141, 197, 228);
-	/* Font weight makes no difference?? */
 	font-weight: 1.5rem;
 	margin-inline-start: 1rem;
 	margin-inline-end: 5rem;
+
+}
+
+blockquote p {
+
+	font-style: italic;
+	font-weight: 400;
+	font-size: 1.1rem;
 
 }
 
@@ -108,11 +116,18 @@ ul {
 }
 
 
+ol {
+
+list-style-type: none;
+
+}
+
+
 /* Strong not showing up */
 strong {
 
 	font-style: bold;
-	color:rgb(87, 28, 182);
+	color:rgb(14, 174, 153);
 
 }
 
