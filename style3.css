@@ -7,25 +7,38 @@
 
 --backgroundcolour:rgb(0, 0, 0);
 --primarycolour:rgb(106, 167, 205);
+--secondarycolour:rgb(23, 92, 220);
 --textcolour:rgb(211, 215, 218);
+--accentcolour: rgb(58, 46, 193);
+
+--margin-block-start: 1.5rem;
+--margin-block-end: 3rem;
+--margin-inline-start: 2rem;
+--margin-inline-end: 10rem;
+
+--heading-font-family:'oswald';
+--base-font-family:'raleway';
+--response-font-family:'kalam';
+
+--base-font-size: 1rem;
+--base-font-weight:100;
+--base-spacing:1rem;
+
 /* --line-height: 2rem;
 --padding: 2rem; */
---margin-block-start: 3rem;
---margin-block-end: 7rem;
---margin-inline-start: 2rem;
---base-spacing:1rem;
---base-font-family:'Montserrat';
---response-font-family:'kalam';
---base-font-size: 1rem;
 
 }
+
 
 body {
 
 background-color: var(--backgroundcolour);
 margin-inline-start: calc(2*var(--margin-inline-start));
+font-family: var(--base-font-family);
+margin-inline-end:var(--margin-inline-end) ;
 
 }
+
 
 h1 {
 
@@ -35,37 +48,57 @@ h1 {
 	margin-inline-start: calc(2* var(--base-spacing));
 	margin-block-start: calc(2* var(--base-spacing));
 	color:var(--primarycolour);
-	font-weight: 800;
+	/* font-weight: 800; */
+	font-weight: calc(8*var(--base-font-weight));
 	text-transform: uppercase;
 
 }
 
+
 h1:hover {
 
-	color: rgb(76, 33, 186);
+	color: var(--accentcolour);
 
 }
 
+
 h2, h3 {
 
-	font-size: calc(6*var(--base-font-size));
 	text-transform: uppercase;
 	margin-inline-start: calc(2* var(--base-spacing));
 	margin-block-start: calc(2* var(--base-spacing));
 	margin-block-end: calc(3* var(--base-spacing));
 	color:var(--primarycolour);
-	font-family: 'oswald';
+	font-family: var(--heading-font-family);
+	font-weight: calc(5*var(--base-font-weight));
 
 }
 
+
+h2 {
+
+	font-size: calc(6*var(--base-font-size));
+
+}
+
+
+h3 {
+
+	font-size: calc(4*var(--base-font-size));
+
+}
+
+
 p {
 
-	font-size: 1.5rem;
+	font-size: calc(1.5*var(--base-font-size));
 	padding: var(--padding);
 	font-family: var(--base-font-family);
 	color: var(--textcolour);
 	margin-inline-start: calc(2* var(--base-spacing));
 	margin-block-start: calc(3* var(--base-spacing));
+	font-weight: calc(4*var(--base-font-weight));
+
 
 }
 
@@ -88,6 +121,87 @@ a {
 
 a:hover {
 
-	 color: rgb(76, 33, 186);
+	 color: var(--accentcolour);
 
 	}
+
+
+blockquote p {
+
+	font-family: var(--base-font-family);
+	font-weight: calc(2*var(--base-font-weight));
+	color: var(--textcolour);
+	font-style: italic;
+
+	}
+
+
+.prologue p{
+
+	font-family: var(--base-font-family);
+	font-weight: calc(2*var(--base-font-weight));
+	color: var(--textcolour);
+	font-size: calc(1.1*var(--base-font-size));
+
+}
+
+
+ul {
+
+	font-family: var(--base-font-family);
+	font-size: calc(1.5*var(--base-font-size));
+	margin-inline-start: var(--margin-inline-start);
+	color: var(--textcolour);
+	list-style-type: disc;
+
+}
+
+
+ol {
+
+	list-style-type: none;
+
+}
+
+
+strong {
+
+	font-family: var(--base-font-family);
+	color: var(--secondarycolour);
+	font-weight:calc(5*var(--base-font-weight));
+	font-style: bold;
+	text-transfor: uppercase;
+
+}
+
+
+.reference {
+
+	font-family: var(--base-font-family);
+	font-weight: calc(5*var(--base-font-weight));
+	font-size: calc(1.1*var(--base-font-size));
+	font-style: bold;
+	color: rgb(152, 190, 202);
+
+ }
+
+
+ em, cite {
+
+	font-family: var(--base-font-family);
+	font-weight: calc(3*var(--base-font-weight));
+	font-size: calc(1.5*var(--base-font-size));
+	color: var(--secondarycolour);
+	font-style: italic;
+
+}
+
+
+sup {
+
+	font-weight: calc(3*var(--base-font-weight));
+	font-size: var(--base-font-size);
+	color: var(--textcolour);
+	vertical-align: super;
+
+}
