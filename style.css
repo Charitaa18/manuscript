@@ -50,6 +50,13 @@ a {
 }
 
 
+a:hover {
+
+	 color: rgb(32, 163, 111);
+
+	}
+
+
 p {
 
 	margin-top: 1rem;
