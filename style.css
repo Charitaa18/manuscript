@@ -33,7 +33,7 @@ body {
 	font-family: var(--text-typeface);
 	margin-inline-start: var(--content-indent);
 	line-height:var(--text-height);
-	margin-inline-start: var(--content-indent);
+	/* margin-inline-start: var(--content-indent); */
 
 }
 
@@ -140,6 +140,7 @@ section p {
 	font-size: calc(1.5*var(--base-text-size));
 	color: var(--primarycolour);
 	margin-inline-start: calc(2* var(--content-indent));
+	margin-block-start: var(--paragraph-spacing);
 	/* line-height: calc(1.5*var(--line-height)); */
 	opacity: 20%;
 
@@ -195,7 +196,7 @@ time {
 
 a.article {
 
-	margin-block-start: var(--base-spacing);
+	margin-inline-start: var(--content-indent);
 
 }
 
@@ -304,9 +305,9 @@ q {
 	padding-block-start: calc(2*var(--base-padding));
 	padding-block-end: calc(2*var(--base-padding));
 	padding-inline-start: calc(4*var(--base-padding));
-	inline-size: 100% var(--inset);
+	/* inline-size: 100% var(--inset);
 	position: sticky;
-	top: 4rem;
+	top: 4rem; */
 
 }
 
