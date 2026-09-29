@@ -168,6 +168,7 @@ ul {
 	margin-inline-start: var(--margin-inline-start);
 	color: var(--textcolour);
 	list-style-type: disc;
+	list-style-position: inside;
 
 }
 
