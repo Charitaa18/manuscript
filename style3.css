@@ -267,6 +267,7 @@ q {
 }
 
 
+/* REWORK! */
 .response q{
 
 	font-family: var(--base-font-family);
@@ -280,8 +281,8 @@ q {
 	padding-block-start: calc(2*var(--base-padding));
 	padding-block-end: calc(2*var(--base-padding));
 	padding-inline-start: calc(4*var(--base-padding));
-	inset: calc(3*var(--base-padding));
 	inline-size: 100% var(--inset);
 	position: sticky;
+	top: 4rem;
 
 }
