@@ -71,7 +71,7 @@ h2, h3 {
 	color:var(--primarycolour);
 	font-family: var(--heading-typeface);
 	font-weight: calc(5*var(--base-text-weight));
-	line-height: calc(4*var(--text-height));
+	line-height: calc(2*var(--text-height));
 	margin-inline-start: calc(2* var(--base-spacing));
 	max-inline-size: var(--heading-end);
 	margin-block-start: calc(5* var(--base-spacing));
@@ -92,7 +92,7 @@ h2 {
 h3 {
 
 	font-size: calc(3*var(--base-text-size));
-	margin-block-end: calc(1* var(--base-spacing));
+	margin-block-end: calc(2* var(--base-spacing));
 
 }
 
@@ -103,7 +103,19 @@ h2::after {
 	width: calc(var(--heading-line) - var(--content-end));
 	/* max-width: var(--content-end); */
 	border-top: 0.4rem solid var(--primarycolour);
-	margin-block-start: var(--page-start);
+	margin-block-start: var(--base-spacing);
+	/* vertical-align: middle; */
+
+}
+
+h3::after {
+
+	content: "";
+	display: block;
+	width: calc(var(--heading-line) - var(--content-end));
+	/* max-width: var(--content-end); */
+	border-top: 0.3rem solid var(--primarycolour);
+	margin-block-start: var(--base-spacing);
 	/* vertical-align: middle; */
 
 }
