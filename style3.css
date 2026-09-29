@@ -1,6 +1,5 @@
 
 /* Check if theres an order to be followed before moving forward!!  */
-/* Look up how to make the text centre-aligned */
 
 :root {
 
@@ -11,7 +10,7 @@
 --accentcolour: rgb(58, 46, 193);
 
 --margin-block-start: 1.5rem;
---margin-block-end: calc(2*var(var(--margin-block-start)));
+--margin-block-end: calc(2*var(--margin-block-start));
 --margin-inline-start: 2rem;
 --margin-inline-end: 8rem;
 
@@ -23,11 +22,11 @@
 --base-font-weight:100;
 --base-spacing:1rem;
 
---line-height: 1.5rem;
+--line-height: calc(1.5*var(--base-font-size));
 --base-padding: 1rem;
+--inset: calc(3*var(--base-padding));
 
 }
-
 
 body {
 
@@ -113,7 +112,7 @@ p {
 	font-family: var(--response-font-family);
 	color: var(--primarycolour);
 	margin-inline-start: calc(8* var(--base-spacing));
-	line-height: calc(1.5*var(--line-height));
+	/* line-height: calc(1.5*var(--line-height)); */
 	opacity: 20%;
 
 }
@@ -205,6 +204,9 @@ ol {
 }
 
 
+section:nth-child(4) { color: purple; }
+
+
 strong {
 
 	font-family: var(--base-font-family);
@@ -257,6 +259,7 @@ span {
 
 }
 
+
 q {
 
 	font-style: italic;
@@ -264,4 +267,21 @@ q {
 }
 
 
+.response q{
 
+	font-family: var(--base-font-family);
+	font-size: calc(1.5*var(--base-font-size));
+	font-weight: calc(4*var(--base-font-weight));
+	color: var(--textcolour);
+	margin-inline-start: calc(8* var(--base-spacing));
+	margin-block-start: calc(8* var(--base-spacing));
+	display: block;
+	background-color: var(--accentcolour);
+	padding-block-start: calc(2*var(--base-padding));
+	padding-block-end: calc(2*var(--base-padding));
+	padding-inline-start: calc(4*var(--base-padding));
+	inset: calc(3*var(--base-padding));
+	inline-size: 100% var(--inset);
+	position: sticky;
+
+}
