@@ -5,15 +5,15 @@
 :root {
 
 --backgroundcolour:rgb(0, 0, 0);
---primarycolour:rgb(106, 167, 205);
---secondarycolour:rgb(23, 92, 220);
---textcolour:rgb(211, 215, 218);
+--primarycolour:rgb(88, 162, 208);
+--secondarycolour:rgb(155, 205, 227);
+--textcolour:rgb(198, 206, 211);
 --accentcolour: rgb(58, 46, 193);
 
 --margin-block-start: 1.5rem;
---margin-block-end: 3rem;
+--margin-block-end: calc(2*var(var(--margin-block-start)));
 --margin-inline-start: 2rem;
---margin-inline-end: 10rem;
+--margin-inline-end: 8rem;
 
 --heading-font-family:'oswald';
 --base-font-family:'raleway';
@@ -31,11 +31,11 @@
 
 body {
 
-background-color: var(--backgroundcolour);
-font-family: var(--base-font-family);
-margin-inline-start: calc(2*var(--margin-inline-start));
-margin-inline-end:var(--margin-inline-end) ;
-line-height: calc(1.5*var(--line-height));
+	background-color: var(--backgroundcolour);
+	font-family: var(--base-font-family);
+	margin-inline-start: var(--margin-inline-start);
+	margin-inline-end:var(--margin-inline-end) ;
+	line-height: calc(1.5*var(--line-height));
 
 }
 
@@ -47,21 +47,22 @@ h1 {
 	font-size: calc(8*var(--base-font-size));
 	font-weight: calc(8*var(--base-font-weight));
 	line-height: calc(6*var(--line-height));
-	margin-inline-start: calc(2* var(--base-spacing));
+	margin-inline-start: var(--base-spacing);
 	margin-inline-end: var(--margin-inline-end);
 	margin-block-start: calc(2* var(--base-spacing));
 	/* margin-block-end: var(--margin-block-end); */
 	margin-block-end: calc(0.2*var(--margin-block-end));
 	text-transform: uppercase;
+	/* height: 100vh; */
 
 }
 
 
-h1:hover {
+/* h1:hover {
 
-	color: var(--accentcolour);
+	color: var(--textcolour);
 
-}
+} */
 
 
 h2, h3 {
@@ -74,6 +75,7 @@ h2, h3 {
 	font-family: var(--heading-font-family);
 	font-weight: calc(5*var(--base-font-weight));
 	line-height: calc(4*var(--line-height));
+	/* text-align: center; */
 
 }
 
@@ -137,12 +139,28 @@ a:hover {
 
 	 color: var(--accentcolour);
 
-	}
+}
 
 
-p.date {
+a.author {
+
+	color: var(--textcolour);
+	font-family: var(--heading-font-family);
+	text-transform: uppercase;
+
+}
+
+a.author:hover {
+
+	 color: var(--accentcolour);
+
+}
+
+
+time {
 
 	font-family: var(--heading-font-family);
+	color: var(--textcolour)
 
 }
 
@@ -154,7 +172,7 @@ blockquote p {
 	color: var(--textcolour);
 	font-style: italic;
 
-	}
+}
 
 
 .prologue p{
@@ -205,7 +223,7 @@ strong {
 	font-size: calc(1.5*var(--base-font-size));
 	margin-inline-start: calc(1.2*var(--margin-inline-start));
 	font-style: bold;
-	color: rgb(152, 190, 202);
+	color: rgb(169, 152, 202);
 
  }
 
@@ -219,8 +237,8 @@ strong {
 	font-style: italic;
 
 }
-
 /* How do you show everything but? Example: I want all my cites to be a specific colour except the first one. */
+
 
 sup {
 
@@ -231,8 +249,19 @@ sup {
 
 }
 
+
 span {
 
 	color: var(--textcolour);
+	font-weight: calc(5*var(--base-font-weight));
 
 }
+
+q {
+
+	font-style: italic;
+
+}
+
+
+
