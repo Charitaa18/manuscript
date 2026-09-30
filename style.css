@@ -1,39 +1,40 @@
 :root {
 
---backgroundcolour:rgb(0, 0, 0);
+/* colours */
+--background:rgb(0, 0, 0);
 --primarycolour:rgb(88, 162, 208);
 --secondarycolour:rgb(155, 205, 227);
 --textcolour:rgb(198, 206, 211);
 --accentcolour: rgb(58, 46, 193);
-
+/* type */
 --heading-typeface:'oswald';
 --text-typeface:'raleway';
 --response-typeface:'kalam';
-
 --base-text-size: 1rem;
 --base-text-weight:100;
---text-height: calc(2.5*var(--base-text-size));
-
+--base-text-height: calc(2.5*var(--base-text-size));
+/* Spacing */
 --base-spacing:1rem;
---page-start: calc(1.5*var(--base-spacing));
+--page-start: calc(2*var(--base-spacing));
 --paragraph-spacing:var(--base-spacing);
 --section-spacing: calc(2*var(--base-spacing));
 --content-indent: calc(2*var(--base-spacing));
 --content-end: calc(3*var(--base-spacing));
-/* --heading-content-end: calc(40*var(--base-spacing)); */
---heading-end: calc(40*var(--base-spacing));
---heading-line: calc(90*var(--base-spacing));
+/* heading */
+--heading-width: calc(40*var(--base-spacing));
+--heading-line-length: calc(90*var(--base-spacing));
+/* inset */
 --inset: calc(3*var(--base-padding));
 
 }
 
 body {
 
-	background-color: var(--backgroundcolour);
+	background-color: var(--background);
 	font-family: var(--text-typeface);
 	margin-inline-start: var(--content-indent);
-	line-height:var(--text-height);
-	/* margin-inline-start: var(--content-indent); */
+	margin-inline-end: var(--content-end);
+	line-height:var(--base-text-height);
 
 }
 
@@ -41,11 +42,11 @@ h1 {
 
 	color:var(--primarycolour);
 	font-family:var(--heading-typeface);
-	font-size: calc(6*var(--base-text-size));
+	font-size: calc(7*var(--base-text-size));
 	font-weight: calc(8*var(--base-text-weight));
-	line-height: calc(3*var(--text-height));
+	line-height: calc(3*var(--base-text-height));
 	margin-inline-start: var(--content-indent);
-	max-inline-size: var(--heading-end);
+	max-inline-size: var(--heading-width);
 	margin-block-start:var(--page-start);
 	margin-block-end: calc(2*var(--base-spacing));
 	text-transform: uppercase;
@@ -57,10 +58,10 @@ h1::after {
 
 	content: "";
 	display: block;
-	width: calc(var(--heading-line) - var(--content-end));
+	width: calc(var(--heading-line-length) - var(--content-end));
 	/* max-width: var(--content-end); */
 	border-top: 0.5rem solid var(--primarycolour);
-	margin-inline-end: var(--heading-end);
+	margin-inline-end: var(--heading-width);
 	margin-block-start: var(--page-start);
 	/* vertical-align: middle; */
 
@@ -71,9 +72,9 @@ h2, h3 {
 	color:var(--primarycolour);
 	font-family: var(--heading-typeface);
 	font-weight: calc(5*var(--base-text-weight));
-	line-height: calc(2*var(--text-height));
+	line-height: calc(2*var(--base-text-height));
 	margin-inline-start: calc(2* var(--base-spacing));
-	max-inline-size: var(--heading-end);
+	max-inline-size: var(--heading-width);
 	margin-block-start: calc(5* var(--base-spacing));
 	text-transform: uppercase;
 	/* margin-block-end: calc(4* var(--base-spacing)); */
@@ -88,7 +89,6 @@ h2 {
 
 }
 
-
 h3 {
 
 	font-size: calc(3*var(--base-text-size));
@@ -100,7 +100,7 @@ h2::after {
 
 	content: "";
 	display: block;
-	width: calc(var(--heading-line) - var(--content-end));
+	width: calc(var(--heading-line-length) - var(--content-end));
 	/* max-width: var(--content-end); */
 	border-top: 0.4rem solid var(--primarycolour);
 	margin-block-start: var(--base-spacing);
@@ -112,7 +112,7 @@ h3::after {
 
 	content: "";
 	display: block;
-	width: calc(var(--heading-line) - var(--content-end));
+	width: calc(var(--heading-line-length) - var(--content-end));
 	/* max-width: var(--content-end); */
 	border-top: 0.3rem solid var(--primarycolour);
 	margin-block-start: var(--base-spacing);
@@ -128,9 +128,10 @@ section p {
 	font-weight: calc(4*var(--base-text-weight));
 	color: var(--textcolour);
 	margin-inline-start: calc(18*var(--content-indent));
-	margin-inline-end:var(--content-end);
+	/* margin-inline-end:var(--content-end); */
 	margin-block-start: var(--paragraph-spacing);
 	margin-block-end: calc(2*var(--paragraph-spacing));
+	/* text-wrap: balance; */
 
 }
 
@@ -140,9 +141,11 @@ section p {
 	font-size: calc(1.5*var(--base-text-size));
 	color: var(--primarycolour);
 	margin-inline-start: calc(2* var(--content-indent));
+	margin-inline-end: var(--content-end);
 	margin-block-start: var(--paragraph-spacing);
 	/* line-height: calc(1.5*var(--line-height)); */
 	opacity: 20%;
+	/* text-wrap: balance; */
 
 }
 
@@ -156,9 +159,10 @@ section p {
 a {
 
 	color: var(--primarycolour);
-	text-decoration: underline;
 	margin-inline-start: var(--content-indent);
-	margin-block-end: var(--base-spacing);
+	margin-block-end: var(--section-spacing);
+	margin-block-start:  var(--base-spacing);
+	text-decoration: underline;
 
 }
 
@@ -167,7 +171,6 @@ a:hover {
 	 color: var(--accentcolour);
 
 }
-
 
 a.author {
 
@@ -215,7 +218,7 @@ blockquote p {
 	font-weight: calc(3*var(--base-text-weight));
 	color:grey;
 	font-size: calc(1.2*var(--base-text-size));
-	line-height: var(--text-height);
+	line-height: calc(var(--base-text-height)/1.5);
 
 }
 
@@ -224,8 +227,10 @@ ul {
 	font-family: var(--text-typeface);
 	font-size: calc(1.3*var(--base-text-size));
 	margin-inline-start: calc(18*var(--content-indent));
+	margin-inline-end: var(--content-end);
 	color: var(--textcolour);
 	list-style-type: disc;
+	/* text-wrap: balance; */
 	/* list-style-position: inside; */
 
 }
@@ -235,8 +240,6 @@ ol {
 	list-style-type: none;
 
 }
-
-/* section:nth-child(4) { color: purple; } */
 
 strong {
 
@@ -253,9 +256,9 @@ strong {
 	font-family: var(--text-typeface);
 	font-weight: calc(5*var(--base-text-weight));
 	font-size: calc(1.5*var(--base-text-size));
-	margin-inline-start: calc(1.2*var(--content-indent));
+	margin-inline-start:var(--content-indent);
 	font-style: bold;
-	color: rgb(169, 152, 202);
+	/* color: rgb(169, 152, 202); */
 
  }
 
@@ -268,7 +271,19 @@ strong {
 	font-style: italic;
 
 }
-/* How do you show everything but? Example: I want all my cites to be a specific colour except the first one. */
+
+/* cite:not(.reference cite) {
+
+	margin-inline-start: var(--content-indent);
+
+} */
+
+.title {
+
+	margin-inline-start: var(--content-indent);
+
+}
+
 
 sup {
 
@@ -298,16 +313,18 @@ q {
 	font-size: calc(1.5*var(--base-text-size));
 	font-weight: calc(4*var(--base-text-weight));
 	color: var(--textcolour);
-	margin-inline-start: calc(8* var(--base-spacing));
+	/* margin-inline-start: calc(8* var(--base-spacing)); */
+	margin-inline-start: calc(2* var(--content-indent));
+	margin-inline-end: var(--content-end);
 	margin-block-start: calc(8* var(--base-spacing));
 	display: block;
 	background-color: var(--accentcolour);
-	padding-block-start: calc(2*var(--base-padding));
+	padding-block-start: calc(4*var(--base-padding));
 	padding-block-end: calc(2*var(--base-padding));
 	padding-inline-start: calc(4*var(--base-padding));
-	/* inline-size: 100% var(--inset);
+	inline-size: 100% var(--inset);
 	position: sticky;
-	top: 4rem; */
+	top: 4rem;
 
 }
 
