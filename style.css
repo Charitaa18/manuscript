@@ -20,9 +20,9 @@
 --paragraph-spacing:var(--base-spacing);
 --section-spacing: calc(2*var(--base-spacing));
 --content-indent: calc(2*var(--base-spacing));
---content-end: calc(3*var(--base-spacing));
+--content-end: calc(2*var(--base-spacing));
 /* heading */
---heading-width: calc(40*var(--base-spacing));
+--heading-width: calc(35*var(--base-spacing));
 --heading-line-length: calc(90*var(--base-spacing));
 /* inset */
 --inset: calc(3*var(--base-padding));
@@ -129,7 +129,7 @@ section p {
 	font-weight: calc(4*var(--base-text-weight));
 	color: var(--textcolour);
 	margin-inline-start: calc(18*var(--content-indent));
-	/* margin-inline-end:var(--content-end); */
+	margin-inline-end:var(--content-end);
 	margin-block-start: var(--paragraph-spacing);
 	margin-block-end: var(--paragraph-spacing);
 	/* text-wrap: balance; */
@@ -144,7 +144,6 @@ section p {
 	margin-inline-start: calc(1* var(--content-indent));
 	margin-inline-end: var(--content-end);
 	margin-block-start: var(--paragraph-spacing);
-	/* line-height: calc(1.5*var(--line-height)); */
 	opacity: 20%;
 	/* text-wrap: balance; */
 
@@ -160,7 +159,7 @@ section p {
 a {
 
 	color: var(--primarycolour);
-	margin-inline-start: var(--content-indent);
+	/* margin-inline-start: var(--content-indent); */
 	margin-block-end: var(--section-spacing);
 	margin-block-start: var(--paragraph-spacing);
 	text-decoration: underline;
@@ -232,7 +231,7 @@ ul {
 	color: var(--textcolour);
 	list-style-type: disc;
 	/* text-wrap: balance; */
-	/* list-style-position: inside; */
+	list-style-position: inside;
 
 }
 
@@ -314,16 +313,13 @@ q {
 	font-size: var(--body-content-size);
 	font-weight: calc(4*var(--base-text-weight));
 	color: var(--textcolour);
-	/* margin-inline-start: calc(8* var(--base-spacing)); */
-	margin-inline-start: calc(2* var(--content-indent));
+	margin-inline-start: var(--content-indent);
 	margin-inline-end: var(--content-end);
-	margin-block-start: calc(8* var(--base-spacing));
+	margin-block-start: calc(2*var(--section-spacing));
+	margin-block-end: var(--section-spacing);
+	padding-inline-start: calc(5*var(--section-spacing));
 	display: block;
 	background-color: var(--accentcolour);
-	padding-block-start: calc(4*var(--base-padding));
-	padding-block-end: calc(2*var(--base-padding));
-	padding-inline-start: calc(4*var(--base-padding));
-	inline-size: 100% var(--inset);
 	position: sticky;
 	top: 4rem;
 
