@@ -11,6 +11,7 @@
 --text-typeface:'raleway';
 --response-typeface:'kalam';
 --base-text-size: 1rem;
+--body-content-size: calc(1.4*var(--base-text-size));
 --base-text-weight:100;
 --base-text-height: calc(2.5*var(--base-text-size));
 /* Spacing */
@@ -48,7 +49,7 @@ h1 {
 	margin-inline-start: var(--content-indent);
 	max-inline-size: var(--heading-width);
 	margin-block-start:var(--page-start);
-	margin-block-end: calc(2*var(--base-spacing));
+	margin-block-end: var(--section-spacing);
 	text-transform: uppercase;
 	/* height: 100vh; */
 
@@ -62,7 +63,7 @@ h1::after {
 	/* max-width: var(--content-end); */
 	border-top: 0.5rem solid var(--primarycolour);
 	margin-inline-end: var(--heading-width);
-	margin-block-start: var(--page-start);
+	margin-block-start: var(--section-spacing);
 	/* vertical-align: middle; */
 
 }
@@ -75,7 +76,7 @@ h2, h3 {
 	line-height: calc(2*var(--base-text-height));
 	margin-inline-start: calc(2* var(--base-spacing));
 	max-inline-size: var(--heading-width);
-	margin-block-start: calc(5* var(--base-spacing));
+	margin-block-start: calc(2* var(--section-spacing));
 	text-transform: uppercase;
 	/* margin-block-end: calc(4* var(--base-spacing)); */
 	/* text-align: center; */
@@ -85,14 +86,14 @@ h2, h3 {
 h2 {
 
 	font-size: calc(4*var(--base-text-size));
-	margin-block-end: calc(2* var(--base-spacing));
+	margin-block-end: var(--section-spacing);
 
 }
 
 h3 {
 
 	font-size: calc(3*var(--base-text-size));
-	margin-block-end: calc(2* var(--base-spacing));
+	margin-block-end: var(--section-spacing);
 
 }
 
@@ -103,7 +104,7 @@ h2::after {
 	width: calc(var(--heading-line-length) - var(--content-end));
 	/* max-width: var(--content-end); */
 	border-top: 0.4rem solid var(--primarycolour);
-	margin-block-start: var(--base-spacing);
+	margin-block-start: var(--section-spacing);
 	/* vertical-align: middle; */
 
 }
@@ -115,7 +116,7 @@ h3::after {
 	width: calc(var(--heading-line-length) - var(--content-end));
 	/* max-width: var(--content-end); */
 	border-top: 0.3rem solid var(--primarycolour);
-	margin-block-start: var(--base-spacing);
+	margin-block-start: var(--section-spacing);
 	/* vertical-align: middle; */
 
 }
@@ -124,13 +125,13 @@ section p {
 
 	font-family: var(--text-typeface);
 	/* font-size: calc(1.5*var(--base-text-size)); */
-	font-size: calc(1.3*var(--base-text-size));
+	font-size: var(--body-content-size);
 	font-weight: calc(4*var(--base-text-weight));
 	color: var(--textcolour);
 	margin-inline-start: calc(18*var(--content-indent));
 	/* margin-inline-end:var(--content-end); */
 	margin-block-start: var(--paragraph-spacing);
-	margin-block-end: calc(2*var(--paragraph-spacing));
+	margin-block-end: var(--paragraph-spacing);
 	/* text-wrap: balance; */
 
 }
@@ -138,9 +139,9 @@ section p {
 .response p {
 
 	font-family: var(--response-typeface);
-	font-size: calc(1.5*var(--base-text-size));
+	font-size: var(--body-content-size);
 	color: var(--primarycolour);
-	margin-inline-start: calc(2* var(--content-indent));
+	margin-inline-start: calc(1* var(--content-indent));
 	margin-inline-end: var(--content-end);
 	margin-block-start: var(--paragraph-spacing);
 	/* line-height: calc(1.5*var(--line-height)); */
@@ -161,7 +162,7 @@ a {
 	color: var(--primarycolour);
 	margin-inline-start: var(--content-indent);
 	margin-block-end: var(--section-spacing);
-	margin-block-start:  var(--base-spacing);
+	margin-block-start: var(--paragraph-spacing);
 	text-decoration: underline;
 
 }
@@ -178,7 +179,7 @@ a.author {
 	font-family: var(--heading-typeface);
 	font-size: calc(1.5*var(--base-text-size));
 	margin-inline-start: var(--content-indent);
-	margin-block-end: var(--base-spacing);
+	margin-block-end: var(--paragraph-spacing);
 	text-transform: uppercase;
 
 }
@@ -225,7 +226,7 @@ blockquote p {
 ul {
 
 	font-family: var(--text-typeface);
-	font-size: calc(1.3*var(--base-text-size));
+	font-size: var(--body-content-size);
 	margin-inline-start: calc(18*var(--content-indent));
 	margin-inline-end: var(--content-end);
 	color: var(--textcolour);
@@ -255,7 +256,7 @@ strong {
 
 	font-family: var(--text-typeface);
 	font-weight: calc(5*var(--base-text-weight));
-	font-size: calc(1.5*var(--base-text-size));
+	font-size: var(--body-content-size);
 	margin-inline-start:var(--content-indent);
 	font-style: bold;
 	/* color: rgb(169, 152, 202); */
@@ -266,7 +267,7 @@ strong {
 
 	font-family: var(--text-typeface);
 	font-weight: calc(3*var(--base-text-weight));
-	font-size: calc(1.3*var(--base-text-size));
+	font-size: var(--body-content-size);
 	color: var(--secondarycolour);
 	font-style: italic;
 
@@ -310,7 +311,7 @@ q {
 .response q{
 
 	font-family: var(--text-typeface);
-	font-size: calc(1.5*var(--base-text-size));
+	font-size: var(--body-content-size);
 	font-weight: calc(4*var(--base-text-weight));
 	color: var(--textcolour);
 	/* margin-inline-start: calc(8* var(--base-spacing)); */
