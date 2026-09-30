@@ -12,6 +12,7 @@
 --response-typeface:'kalam';
 --base-text-size: 1rem;
 --body-content-size: calc(1.4*var(--base-text-size));
+--metadata-size: calc(1.5*var(--base-text-size));
 --base-text-weight:100;
 --base-text-height: calc(2.5*var(--base-text-size));
 /* Spacing */
@@ -60,7 +61,7 @@ h1::after {
 	content: "";
 	display: block;
 	width: calc(var(--heading-line-length) - var(--content-end));
-	/* max-width: var(--content-end); */
+	/* max-width: calc(var(--heading-line-length) - var(--content-end)); */
 	border-top: 0.5rem solid var(--primarycolour);
 	margin-inline-end: var(--heading-width);
 	margin-block-start: var(--section-spacing);
@@ -124,7 +125,7 @@ h3::after {
 section p {
 
 	font-family: var(--text-typeface);
-	/* font-size: calc(1.5*var(--base-text-size)); */
+	/* font-size: var(--metadata-size); */
 	font-size: var(--body-content-size);
 	font-weight: calc(4*var(--base-text-weight));
 	color: var(--textcolour);
@@ -176,7 +177,7 @@ a.author {
 
 	color: var(--textcolour);
 	font-family: var(--heading-typeface);
-	font-size: calc(1.5*var(--base-text-size));
+	font-size: var(--metadata-size);
 	margin-inline-start: var(--content-indent);
 	margin-block-end: var(--paragraph-spacing);
 	text-transform: uppercase;
@@ -192,7 +193,7 @@ a.author:hover {
 time {
 
 	font-family: var(--heading-typeface);
-	font-size: calc(1.5*var(--base-text-size));
+	font-size: var(--metadata-size);
 	color: var(--textcolour)
 
 }
@@ -258,9 +259,8 @@ strong {
 	font-size: var(--body-content-size);
 	margin-inline-start:var(--content-indent);
 	font-style: bold;
-	/* color: rgb(169, 152, 202); */
 
- }
+}
 
  em, cite {
 
