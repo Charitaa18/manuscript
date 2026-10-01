@@ -1,122 +1,146 @@
-
-/* Check if theres an order to be followed before moving forward!!  */
-
 :root {
 
---backgroundcolour:rgb(0, 0, 0);
---primarycolour:rgb(88, 162, 208);
---secondarycolour:rgb(155, 205, 227);
+/* colours */
+--background:rgb(0, 0, 0);
+--primarycolour:rgb(68, 156, 211);
+--secondarycolour:rgb(133, 195, 222);
 --textcolour:rgb(198, 206, 211);
 --accentcolour: rgb(58, 46, 193);
-
---margin-block-start: 1.5rem;
---margin-block-end: calc(2*var(--margin-block-start));
---margin-inline-start: 2rem;
---margin-inline-end: 8rem;
-
---heading-font-family:'oswald';
---base-font-family:'raleway';
---response-font-family:'kalam';
-
---base-font-size: 1rem;
---base-font-weight:100;
---base-spacing:1rem;
-
---line-height: calc(1.5*var(--base-font-size));
---base-padding: 1rem;
---inset: calc(3*var(--base-padding));
+/* typeface */
+--heading-typeface:'oswald';
+--text-typeface:'raleway';
+--response-typeface:'kalam';
+/* type size */
+--base-text-size: 1rem;
+--body-size: calc(1.4*var(--base-text-size));
+--reference-size: calc(1.2*var(--base-text-size));
+--metadata-size: calc(2*var(--base-text-size));
+--subheading-size: calc(3*var(--base-text-size));
+--heading-size: calc(4*var(--base-text-size));
+--title-size: calc(8*var(--base-text-size));
+/* type weight */
+--base-text-weight:100;
+--thin-wt: calc(3*var(--base-text-weight));
+--regular-wt: calc(4*var(--base-text-weight));
+--medium-wt: calc(5*var(--base-text-weight));
+--bold-wt: calc(8*var(--base-text-weight));
+/* Spacing */
+--base-spacing: var(--base-text-size);
+--paragraph-spacing:var(--base-spacing);
+--section-spacing: calc(2*var(--paragraph-spacing));
+--page-start: calc(2*var(--section-spacing));
+--content-indent: var(--page-start);
+--content-end: var(--content-indent);
+/* leading */
+--regular-leading: calc(2.5*var(--base-text-size));
+--tight-leading: calc(var(--regular-leading)/1.5);
+--relaxed-leading: calc(2*var(--regular-leading));
+--loose-leading: calc(3*var(--regular-leading));
+/* Width */
+--reading-width: calc(100vw - 2*var(--content-indent));
+--heading-width: calc(40*var(--base-spacing));
+--content-start: calc(var(--reading-width)/2);
+--heading-line-length: var(--reading-width);
+/* inset */
+--inset: calc(3*var(--base-spacing));
 
 }
 
 body {
 
-	background-color: var(--backgroundcolour);
-	font-family: var(--base-font-family);
-	margin-inline-start: var(--margin-inline-start);
-	margin-inline-end:var(--margin-inline-end) ;
-	line-height: calc(1.5*var(--line-height));
+	background-color: var(--background);
+	color: var(--textcolour);
+	font-size: var(--body-size);
+	font-family: var(--text-typeface);
+	font-weight: var(--regular-wt);
+	line-height:var(--regular-leading);
+	inline-size: calc(100vw - 2*var(--content-indent));
+	max-inline-size: var(--reading-width);
+	margin-inline: auto;
+	/* border: 2px solid red; */
 
 }
-
 
 h1 {
 
 	color:var(--primarycolour);
-	font-family:'oswald';
-	font-size: calc(8*var(--base-font-size));
-	font-weight: calc(8*var(--base-font-weight));
-	line-height: calc(6*var(--line-height));
-	margin-inline-start: var(--base-spacing);
-	margin-inline-end: var(--margin-inline-end);
-	margin-block-start: calc(2* var(--base-spacing));
-	/* margin-block-end: var(--margin-block-end); */
-	margin-block-end: calc(0.2*var(--margin-block-end));
+	font-family:var(--heading-typeface);
+	font-size: var(--title-size);
+	font-weight: var(--bold-wt);
+	line-height: var(--loose-leading);
+	max-inline-size: var(--heading-width);
+	margin-block-start:var(--page-start);
+	margin-block-end: var(--section-spacing);
 	text-transform: uppercase;
 	/* height: 100vh; */
 
 }
 
+h1::after {
 
-/* h1:hover {
+	content: "";
+	display: block;
+	width: var(--heading-line-length);
+	/* max-width: calc(var(--heading-line-length) - var(--content-end)); */
+	border-top: 0.5rem solid var(--primarycolour);
+	margin-block-start: var(--section-spacing);
 
-	color: var(--textcolour);
-
-} */
-
+}
 
 h2, h3 {
 
-	text-transform: uppercase;
-	margin-inline-start: calc(2* var(--base-spacing));
-	margin-block-start: calc(6* var(--base-spacing));
-	/* margin-block-end: calc(4* var(--base-spacing)); */
 	color:var(--primarycolour);
-	font-family: var(--heading-font-family);
-	font-weight: calc(5*var(--base-font-weight));
-	line-height: calc(4*var(--line-height));
-	/* text-align: center; */
+	font-family: var(--heading-typeface);
+	font-weight: var(--medium-wt);
+	line-height: var(--relaxed-leading);
+	max-inline-size: var(--heading-width);
+	margin-block-start: var(--page-start);
+	margin-block-end: var(--section-spacing);
+	text-transform: uppercase;
 
 }
-
 
 h2 {
 
-	font-size: calc(5*var(--base-font-size));
-	margin-block-end: calc(4* var(--base-spacing));
+	font-size: var(--heading-size);
 
 }
-
 
 h3 {
 
-	font-size: calc(4*var(--base-font-size));
-	margin-block-end: calc(2* var(--base-spacing));
+	font-size: var(--subheading-size);
 
 }
 
+h2::after,
+h3::after {
 
-p {
+	content: "";
+	display: block;
+	width: var(--heading-line-length);
+	border-top: 0.4rem solid var(--primarycolour);
+	margin-block-start: var(--section-spacing);
+	/* vertical-align: middle; */
 
-	font-family: var(--base-font-family);
-	font-size: calc(1.5*var(--base-font-size));
-	font-weight: calc(4*var(--base-font-weight));
-	color: var(--textcolour);
-	margin-inline-start: calc(2* var(--base-spacing));
-	margin-block-start: calc(2.5* var(--base-spacing));
-	line-height: calc(1.5*var(--line-height));
+}
+
+section p {
+
+	margin-inline-start: var(--content-start);
+	margin-block-start: var(--paragraph-spacing);
+	margin-block-end: var(--paragraph-spacing);
+	/* text-wrap: balance; */
 
 }
 
 .response p {
 
-	font-family: var(--response-font-family);
+	font-family: var(--response-typeface);
 	color: var(--primarycolour);
-	margin-inline-start: calc(8* var(--base-spacing));
-	/* line-height: calc(1.5*var(--line-height)); */
+	margin-block-start: var(--paragraph-spacing);
 	opacity: 20%;
 
 }
-
 
 .response p:hover {
 
@@ -125,14 +149,56 @@ p {
 
 }
 
+blockquote p {
 
-a {
-
-	color: var(--primarycolour);
-	text-decoration: underline;
+	font-weight: var(--thin-wt);
+	font-style: italic;
 
 }
 
+.prologue p{
+
+	font-weight: var(--thin-wt);
+	color: var(--secondarycolour);
+	font-size: var(--reference-size);
+	line-height: var(--tight-leading);
+	opacity: 60%;
+
+}
+
+q {
+
+	font-style: italic;
+	font-family: var(--text-typeface);
+	color: var(--textcolour);
+
+}
+
+.response q.highlight{
+
+	text-align: center;
+	margin-inline: var(--content-indent);
+	margin-block-start: var(--page-start);
+	margin-block-end: var(--section-spacing);
+	padding-block-start: var(--paragraph-spacing);
+	padding-block-end: var(--paragraph-spacing);
+	border-end-end-radius: 2rem;
+	border-top-left-radius: 2rem;
+	/* <q> tag is an inline element unline <blockquote> */
+	display: block;
+	background-color: var(--accentcolour);
+	position: sticky;
+	inset-block-start: var(--page-start);
+
+}
+
+a:not(#top){
+
+	margin-block-end: var(--section-spacing);
+	margin-block-start: var(--paragraph-spacing);
+	text-decoration: underline;
+
+}
 
 a:hover {
 
@@ -140,11 +206,11 @@ a:hover {
 
 }
 
-
 a.author {
 
+	font-family: var(--heading-typeface);
+	font-size: var(--metadata-size);
 	color: var(--textcolour);
-	font-family: var(--heading-font-family);
 	text-transform: uppercase;
 
 }
@@ -155,47 +221,21 @@ a.author:hover {
 
 }
 
-
 time {
 
-	font-family: var(--heading-font-family);
-	color: var(--textcolour)
+	font-family: var(--heading-typeface);
+	font-size: var(--metadata-size);
 
 }
-
-
-blockquote p {
-
-	font-family: var(--base-font-family);
-	font-weight: calc(2*var(--base-font-weight));
-	color: var(--textcolour);
-	font-style: italic;
-
-}
-
-
-.prologue p{
-
-	font-family: var(--base-font-family);
-	font-weight: calc(3*var(--base-font-weight));
-	color:grey;
-	font-size: calc(1.2*var(--base-font-size));
-	line-height: calc(1.1*var(--line-height));
-
-}
-
 
 ul {
 
-	font-family: var(--base-font-family);
-	font-size: calc(1.5*var(--base-font-size));
-	margin-inline-start: var(--margin-inline-start);
-	color: var(--textcolour);
+	margin-inline-start: var(--content-start);
+	margin-inline-end: var(--content-end);
 	list-style-type: disc;
 	list-style-position: inside;
 
 }
-
 
 ol {
 
@@ -203,86 +243,85 @@ ol {
 
 }
 
+.reference {
 
-section:nth-child(4) { color: purple; }
+	font-size: var(--reference-size);
+	font-weight: var(--thin-wt);
 
+}
 
 strong {
 
-	font-family: var(--base-font-family);
 	color: var(--secondarycolour);
-	font-weight:calc(5*var(--base-font-weight));
-	font-style: bold;
+	font-weight:var(--bold-wt);
 	text-transform: uppercase;
 
 }
 
-
-.reference {
-
-	font-family: var(--base-font-family);
-	font-weight: calc(5*var(--base-font-weight));
-	font-size: calc(1.5*var(--base-font-size));
-	margin-inline-start: calc(1.2*var(--margin-inline-start));
-	font-style: bold;
-	color: rgb(169, 152, 202);
-
- }
-
-
  em, cite {
 
-	font-family: var(--base-font-family);
-	font-weight: calc(3*var(--base-font-weight));
-	font-size: calc(1.5*var(--base-font-size));
 	color: var(--secondarycolour);
 	font-style: italic;
 
 }
-/* How do you show everything but? Example: I want all my cites to be a specific colour except the first one. */
-
 
 sup {
 
-	font-weight: calc(3*var(--base-font-weight));
-	font-size: var(--base-font-size);
-	color: var(--textcolour);
+	font-weight: var(--thin-wt);
+	font-size: var(--base-text-size);
 	vertical-align: super;
 
 }
 
+span.author {
 
-span {
-
+	font-weight: var(--bold-wt);
 	color: var(--textcolour);
-	font-weight: calc(5*var(--base-font-weight));
 
 }
 
+#top {
 
-q {
-
-	font-style: italic;
-
-}
-
-
-/* REWORK! */
-.response q{
-
-	font-family: var(--base-font-family);
-	font-size: calc(1.5*var(--base-font-size));
-	font-weight: calc(4*var(--base-font-weight));
-	color: var(--textcolour);
-	margin-inline-start: calc(8* var(--base-spacing));
-	margin-block-start: calc(8* var(--base-spacing));
 	display: block;
-	background-color: var(--accentcolour);
-	padding-block-start: calc(2*var(--base-padding));
-	padding-block-end: calc(2*var(--base-padding));
-	padding-inline-start: calc(4*var(--base-padding));
-	inline-size: 100% var(--inset);
-	position: sticky;
-	top: 4rem;
+	background-color: var(--primarycolour);
+	color: var(--textcolour);
+	font-size: var(--reference-size);
+	inline-size: max-content;
+	margin-block-start: var(--page-start) ;
+	padding-inline: var(--base-spacing);
+	border-top-left-radius: var(--base-spacing);
+	border-end-end-radius: var(--base-spacing);
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

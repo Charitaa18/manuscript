@@ -54,8 +54,7 @@ body {
 	font-family: var(--text-typeface);
 	font-weight: var(--regular-wt);
 	line-height:var(--regular-leading);
-	inline-size: calc(100vw - var(--content-indent));
-	margin-inline-start: var(--content-indent);
+	inline-size: calc(100vw - 2*var(--content-indent));
 	max-inline-size: var(--reading-width);
 	margin-inline: auto;
 	/* border: 2px solid red; */
@@ -140,7 +139,6 @@ section p {
 	color: var(--primarycolour);
 	margin-block-start: var(--paragraph-spacing);
 	opacity: 20%;
-	/* text-wrap: balance; */
 
 }
 
@@ -178,10 +176,10 @@ q {
 
 .response q.highlight{
 
+	text-align: center;
 	margin-inline: var(--content-indent);
 	margin-block-start: var(--page-start);
 	margin-block-end: var(--section-spacing);
-	text-align: center;
 	padding-block-start: var(--paragraph-spacing);
 	padding-block-end: var(--paragraph-spacing);
 	border-end-end-radius: 2rem;
@@ -190,7 +188,7 @@ q {
 	display: block;
 	background-color: var(--accentcolour);
 	position: sticky;
-	top: 4rem;
+	inset-block-start: var(--page-start);
 
 }
 
@@ -213,7 +211,6 @@ a.author {
 	font-family: var(--heading-typeface);
 	font-size: var(--metadata-size);
 	color: var(--textcolour);
-	margin-block-end: var(--paragraph-spacing);
 	text-transform: uppercase;
 
 }
@@ -228,7 +225,6 @@ time {
 
 	font-family: var(--heading-typeface);
 	font-size: var(--metadata-size);
-	color: var(--textcolour)
 
 }
 
@@ -237,7 +233,6 @@ ul {
 	margin-inline-start: var(--content-start);
 	margin-inline-end: var(--content-end);
 	list-style-type: disc;
-	/* text-wrap: balance; */
 	list-style-position: inside;
 
 }
@@ -269,12 +264,6 @@ strong {
 	font-style: italic;
 
 }
-
-/* cite:not(.reference cite) {
-
-	margin-inline-start: var(--content-indent);
-
-} */
 
 sup {
 
