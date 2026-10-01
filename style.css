@@ -12,10 +12,10 @@
 --response-typeface:'kalam';
 --base-text-size: 1rem;
 --body-content-size: calc(1.4*var(--base-text-size));
---reference-size: calc(1.2*var(var(--base-text-size)));
+--reference-size: calc(1.2*var(--base-text-size));
 --metadata-size: calc(1.5*var(--base-text-size));
 --base-text-weight:100;
---base-text-height: calc(2.5*var(--base-text-size));
+--base-reading-height: calc(2.5*var(--base-text-size));
 /* Spacing */
 --base-spacing:1rem;
 --paragraph-spacing:var(--base-spacing);
@@ -39,7 +39,7 @@ body {
 	max-inline-size: var(--reading-width);
 	margin-inline-start: var(--content-indent);
 	margin-inline-end: var(--content-end);
-	line-height:var(--base-text-height);
+	line-height:var(--base-reading-height);
 
 }
 
@@ -47,9 +47,9 @@ h1 {
 
 	color:var(--primarycolour);
 	font-family:var(--heading-typeface);
-	font-size: calc(7*var(--base-text-size));
+	font-size: calc(8*var(--base-text-size));
 	font-weight: calc(8*var(--base-text-weight));
-	line-height: calc(3*var(--base-text-height));
+	line-height: calc(3*var(--base-reading-height));
 	margin-inline-start: var(--content-indent);
 	max-inline-size: var(--heading-width);
 	margin-block-start:var(--page-start);
@@ -78,7 +78,7 @@ h2, h3 {
 	color:var(--primarycolour);
 	font-family: var(--heading-typeface);
 	font-weight: calc(5*var(--base-text-weight));
-	line-height: calc(3*var(--base-text-height));
+	line-height: calc(2*var(--base-reading-height));
 	margin-inline-start: var(--content-indent);
 	max-inline-size: var(--heading-width);
 	margin-block-start: calc(2* var(--section-spacing));
@@ -133,7 +133,7 @@ section p {
 	font-size: var(--body-content-size);
 	font-weight: calc(4*var(--base-text-weight));
 	color: var(--textcolour);
-	margin-inline-start: calc(20*var(--content-indent));
+	margin-inline-start: calc(var(--reading-width)/2);
 	margin-inline-end:var(--content-end);
 	margin-block-start: var(--paragraph-spacing);
 	margin-block-end: var(--paragraph-spacing);
@@ -223,7 +223,7 @@ blockquote p {
 	font-weight: calc(3*var(--base-text-weight));
 	color:grey;
 	font-size: calc(1.2*var(--base-text-size));
-	line-height: calc(var(--base-text-height)/1.5);
+	line-height: calc(var(--base-reading-height)/1.5);
 
 }
 
