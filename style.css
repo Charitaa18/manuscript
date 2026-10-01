@@ -29,7 +29,7 @@
 --paragraph-spacing:var(--base-spacing);
 --section-spacing: calc(2*var(--paragraph-spacing));
 --page-start: calc(2*var(--section-spacing));
---content-indent: var(--section-spacing);
+--content-indent: var(--page-start);
 --content-end: var(--content-indent);
 /* leading */
 --regular-leading: calc(2.5*var(--base-text-size));
@@ -37,8 +37,10 @@
 --relaxed-leading: calc(2*var(--regular-leading));
 --loose-leading: calc(3*var(--regular-leading));
 /* Width */
---reading-width: calc(90*var(--base-spacing));
+/* --reading-width: calc(96*var(--base-spacing)); */
+--reading-width: calc(100vw - 2*var(--content-indent));
 --heading-width: calc(35*var(--base-spacing));
+--content-start: calc(var(--reading-width)/2);
 --heading-line-length: var(--reading-width);
 /* inset */
 --inset: calc(3*var(--base-spacing));
@@ -51,9 +53,11 @@ body {
 	font-family: var(--text-typeface);
 	font-weight: var(--regular-wt);
 	line-height:var(--regular-leading);
-	/* max-inline-size: calc(100vw - var(--content-indent)); */
+	inline-size: calc(100vw - var(--content-indent));
+	margin-inline-start: var(--content-indent);
 	max-inline-size: var(--reading-width);
 	margin-inline: auto;
+	border: 2px solid red;
 
 }
 
@@ -64,13 +68,11 @@ h1 {
 	font-size: var(--title-size);
 	font-weight: var(--bold-wt);
 	line-height: var(--loose-leading);
-	margin-inline-start: var(--content-indent);
 	max-inline-size: var(--heading-width);
 	margin-block-start:var(--page-start);
 	margin-block-end: var(--section-spacing);
 	text-transform: uppercase;
 	/* height: 100vh; */
-	/* margin-inline: auto; - DOES THIS WORK? iS IT OKAY TO USE? */
 
 }
 
@@ -78,12 +80,10 @@ h1::after {
 
 	content: "";
 	display: block;
-	width: calc(var(--heading-line-length) - var(--content-end));
+	width: var(--heading-line-length);
 	/* max-width: calc(var(--heading-line-length) - var(--content-end)); */
 	border-top: 0.5rem solid var(--primarycolour);
-	margin-inline-end: var(--heading-width);
 	margin-block-start: var(--section-spacing);
-	/* vertical-align: middle; */
 
 }
 
@@ -93,11 +93,9 @@ h2, h3 {
 	font-family: var(--heading-typeface);
 	font-weight: var(--medium-wt);
 	line-height: var(--relaxed-leading);
-	margin-inline-start: var(--content-indent);
 	max-inline-size: var(--heading-width);
-	margin-block-start: calc(2* var(--section-spacing));
+	margin-block-start: var(--page-start);
 	text-transform: uppercase;
-	/* margin-block-end: calc(4* var(--base-spacing)); */
 	/* text-align: center; */
 
 }
@@ -120,8 +118,7 @@ h2::after {
 
 	content: "";
 	display: block;
-	width: calc(var(--heading-line-length) - var(--content-end));
-	/* max-width: var(--content-end); */
+	width: var(--heading-line-length);
 	border-top: 0.4rem solid var(--primarycolour);
 	margin-block-start: var(--section-spacing);
 	/* vertical-align: middle; */
@@ -132,8 +129,7 @@ h3::after {
 
 	content: "";
 	display: block;
-	width: calc(var(--heading-line-length) - var(--content-end));
-	/* max-width: var(--content-end); */
+	width: var(--heading-line-length);
 	border-top: 0.3rem solid var(--primarycolour);
 	margin-block-start: var(--section-spacing);
 	/* vertical-align: middle; */
@@ -143,12 +139,9 @@ h3::after {
 section p {
 
 	font-family: var(--text-typeface);
-	/* font-size: var(--metadata-size); */
 	font-size: var(--body-size);
-	/* font-weight: var(--regular-wt); */
 	color: var(--textcolour);
-	margin-inline-start: calc(var(--reading-width)/2);
-	margin-inline-end:var(--content-end);
+	margin-inline-start: var(--content-start);
 	margin-block-start: var(--paragraph-spacing);
 	margin-block-end: var(--paragraph-spacing);
 	/* text-wrap: balance; */
@@ -160,8 +153,6 @@ section p {
 	font-family: var(--response-typeface);
 	font-size: var(--body-size);
 	color: var(--primarycolour);
-	margin-inline-start: calc(1* var(--content-indent));
-	margin-inline-end: var(--content-end);
 	margin-block-start: var(--paragraph-spacing);
 	opacity: 20%;
 	/* text-wrap: balance; */
@@ -196,7 +187,7 @@ a.author {
 	color: var(--textcolour);
 	font-family: var(--heading-typeface);
 	font-size: var(--metadata-size);
-	margin-inline-start: var(--content-indent);
+	/* margin-inline-start: var(--content-indent); */
 	margin-block-end: var(--paragraph-spacing);
 	text-transform: uppercase;
 
@@ -216,11 +207,6 @@ time {
 
 }
 
-a.article {
-
-	margin-inline-start: var(--content-indent);
-
-}
 
 blockquote p {
 
@@ -247,7 +233,7 @@ ul {
 
 	font-family: var(--text-typeface);
 	font-size: var(--body-size);
-	margin-inline-start: calc(20*var(--content-indent));
+	margin-inline-start: var(--content-start);
 	margin-inline-end: var(--content-end);
 	color: var(--textcolour);
 	list-style-type: disc;
@@ -280,7 +266,6 @@ strong {
 	font-family: var(--text-typeface);
 	font-weight: var(--medium-wt);
 	font-size: var(--body-size);
-	margin-inline-start:var(--content-indent);
 	font-style: bold;
 
 }
@@ -300,13 +285,6 @@ strong {
 	margin-inline-start: var(--content-indent);
 
 } */
-
-.title {
-
-	margin-inline-start: var(--content-indent);
-
-}
-
 
 sup {
 
