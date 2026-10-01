@@ -248,17 +248,18 @@ ol {
 
 }
 
+.reference {
+
+	font-size: var(--reference-size);
+	font-weight: var(--thin-wt);
+
+}
+
 strong {
 
 	color: var(--secondarycolour);
 	font-weight:var(--bold-wt);
 	text-transform: uppercase;
-
-}
-
-.reference {
-
-	font-weight: var(--thin-wt);
 
 }
 
@@ -283,18 +284,10 @@ sup {
 
 }
 
-span:not(.author) {
-
-	/* font-weight: var(--thin-wt);
-	font-size: var(--reference-size);
-	color: var(--textcolour); */
-
-}
-
-span .author {
+span.author {
 
 	font-weight: var(--bold-wt);
-	font-size: var(--reference-size);
+	color: var(--textcolour);
 
 }
 
