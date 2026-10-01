@@ -2,8 +2,8 @@
 
 /* colours */
 --background:rgb(0, 0, 0);
---primarycolour:rgb(88, 162, 208);
---secondarycolour:rgb(155, 205, 227);
+--primarycolour:rgb(68, 156, 211);
+--secondarycolour:rgb(133, 195, 222);
 --textcolour:rgb(198, 206, 211);
 --accentcolour: rgb(58, 46, 193);
 /* type */
@@ -12,19 +12,21 @@
 --response-typeface:'kalam';
 --base-text-size: 1rem;
 --body-content-size: calc(1.4*var(--base-text-size));
+--reference-size: calc(1.2*var(var(--base-text-size)));
 --metadata-size: calc(1.5*var(--base-text-size));
 --base-text-weight:100;
 --base-text-height: calc(2.5*var(--base-text-size));
 /* Spacing */
 --base-spacing:1rem;
---page-start: calc(2*var(--base-spacing));
 --paragraph-spacing:var(--base-spacing);
---section-spacing: calc(2*var(--base-spacing));
---content-indent: calc(2*var(--base-spacing));
---content-end: calc(2*var(--base-spacing));
-/* heading */
+--section-spacing: calc(2*var(--paragraph-spacing));
+--page-start: var(--section-spacing);
+--content-indent: var(--section-spacing);
+--content-end: var(--content-indent);
+/* Width */
+--reading-width: calc(90*var(--base-spacing));
 --heading-width: calc(35*var(--base-spacing));
---heading-line-length: calc(90*var(--base-spacing));
+--heading-line-length: var(--reading-width);
 /* inset */
 --inset: calc(3*var(--base-padding));
 
@@ -34,6 +36,7 @@ body {
 
 	background-color: var(--background);
 	font-family: var(--text-typeface);
+	max-inline-size: var(--reading-width);
 	margin-inline-start: var(--content-indent);
 	margin-inline-end: var(--content-end);
 	line-height:var(--base-text-height);
@@ -53,6 +56,7 @@ h1 {
 	margin-block-end: var(--section-spacing);
 	text-transform: uppercase;
 	/* height: 100vh; */
+	/* margin-inline: auto; - DOES THIS WORK? iS IT OKAY TO USE? */
 
 }
 
@@ -74,8 +78,8 @@ h2, h3 {
 	color:var(--primarycolour);
 	font-family: var(--heading-typeface);
 	font-weight: calc(5*var(--base-text-weight));
-	line-height: calc(2*var(--base-text-height));
-	margin-inline-start: calc(2* var(--base-spacing));
+	line-height: calc(3*var(--base-text-height));
+	margin-inline-start: var(--content-indent);
 	max-inline-size: var(--heading-width);
 	margin-block-start: calc(2* var(--section-spacing));
 	text-transform: uppercase;
@@ -129,7 +133,7 @@ section p {
 	font-size: var(--body-content-size);
 	font-weight: calc(4*var(--base-text-weight));
 	color: var(--textcolour);
-	margin-inline-start: calc(18*var(--content-indent));
+	margin-inline-start: calc(20*var(--content-indent));
 	margin-inline-end:var(--content-end);
 	margin-block-start: var(--paragraph-spacing);
 	margin-block-end: var(--paragraph-spacing);
@@ -227,7 +231,7 @@ ul {
 
 	font-family: var(--text-typeface);
 	font-size: var(--body-content-size);
-	margin-inline-start: calc(18*var(--content-indent));
+	margin-inline-start: calc(20*var(--content-indent));
 	margin-inline-end: var(--content-end);
 	color: var(--textcolour);
 	list-style-type: disc;
@@ -239,6 +243,9 @@ ul {
 ol {
 
 	list-style-type: none;
+	font-family: var(--text-typeface);
+	font-size: var(--body-content-size);
+	color: var(--textcolour);
 
 }
 
@@ -296,8 +303,17 @@ sup {
 
 span {
 
+	/* color: var(--textcolour);
+	font-weight: calc(2*var(--base-text-weight)); */
+	font-size: var(--reference-size);
+
+}
+
+span .author {
+
 	color: var(--textcolour);
-	font-weight: calc(5*var(--base-text-weight));
+	font-weight: calc(6*var(--base-text-weight));
+	font-size: var(--reference-size);
 
 }
 
@@ -317,7 +333,11 @@ q {
 	margin-inline-end: var(--content-end);
 	margin-block-start: calc(2*var(--section-spacing));
 	margin-block-end: var(--section-spacing);
-	padding-inline-start: calc(5*var(--section-spacing));
+	padding-inline-start: calc(5.5*var(--section-spacing));
+	padding-block-start: var(--paragraph-spacing);
+	padding-block-end: var(--paragraph-spacing);
+	border-end-end-radius: 2rem;
+	border-top-left-radius: 2rem;
 	display: block;
 	background-color: var(--accentcolour);
 	position: sticky;
