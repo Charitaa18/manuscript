@@ -14,7 +14,7 @@
 --base-text-size: 1rem;
 --body-size: calc(1.4*var(--base-text-size));
 --reference-size: calc(1.2*var(--base-text-size));
---metadata-size: calc(1.5*var(--base-text-size));
+--metadata-size: calc(2*var(--base-text-size));
 --subheading-size: calc(3*var(--base-text-size));
 --heading-size: calc(4*var(--base-text-size));
 --title-size: calc(8*var(--base-text-size));
@@ -37,9 +37,8 @@
 --relaxed-leading: calc(2*var(--regular-leading));
 --loose-leading: calc(3*var(--regular-leading));
 /* Width */
-/* --reading-width: calc(96*var(--base-spacing)); */
 --reading-width: calc(100vw - 2*var(--content-indent));
---heading-width: calc(35*var(--base-spacing));
+--heading-width: calc(40*var(--base-spacing));
 --content-start: calc(var(--reading-width)/2);
 --heading-line-length: var(--reading-width);
 /* inset */
@@ -59,7 +58,7 @@ body {
 	margin-inline-start: var(--content-indent);
 	max-inline-size: var(--reading-width);
 	margin-inline: auto;
-	border: 2px solid red;
+	/* border: 2px solid red; */
 
 }
 
@@ -162,7 +161,6 @@ blockquote p {
 .prologue p{
 
 	font-weight: var(--thin-wt);
-	/* color:grey; */
 	color: var(--secondarycolour);
 	font-size: var(--reference-size);
 	line-height: var(--tight-leading);
@@ -170,9 +168,34 @@ blockquote p {
 
 }
 
-a {
+q {
 
-	color: var(--primarycolour);
+	font-style: italic;
+	font-family: var(--text-typeface);
+	color: var(--textcolour);
+
+}
+
+.response q.highlight{
+
+	margin-inline: var(--content-indent);
+	margin-block-start: var(--page-start);
+	margin-block-end: var(--section-spacing);
+	text-align: center;
+	padding-block-start: var(--paragraph-spacing);
+	padding-block-end: var(--paragraph-spacing);
+	border-end-end-radius: 2rem;
+	border-top-left-radius: 2rem;
+	/* <q> tag is an inline element unline <blockquote> */
+	display: block;
+	background-color: var(--accentcolour);
+	position: sticky;
+	top: 4rem;
+
+}
+
+a:not(#top){
+
 	margin-block-end: var(--section-spacing);
 	margin-block-start: var(--paragraph-spacing);
 	text-decoration: underline;
@@ -189,6 +212,7 @@ a.author {
 
 	font-family: var(--heading-typeface);
 	font-size: var(--metadata-size);
+	color: var(--textcolour);
 	margin-block-end: var(--paragraph-spacing);
 	text-transform: uppercase;
 
@@ -235,7 +259,6 @@ strong {
 .reference {
 
 	font-weight: var(--thin-wt);
-	font-style: bold;
 
 }
 
@@ -262,9 +285,9 @@ sup {
 
 span:not(.author) {
 
-	font-weight: var(--thin-wt);
+	/* font-weight: var(--thin-wt);
 	font-size: var(--reference-size);
-	color: var(--textcolour);
+	color: var(--textcolour); */
 
 }
 
@@ -275,27 +298,17 @@ span .author {
 
 }
 
-q {
+#top {
 
-	font-style: italic;
-
-}
-
-.response q{
-
-	margin-inline: var(--content-indent);
-	margin-block-start: var(--page-start);
-	margin-block-end: var(--section-spacing);
-	text-align: center;
-	padding-block-start: var(--paragraph-spacing);
-	padding-block-end: var(--paragraph-spacing);
-	border-end-end-radius: 2rem;
-	border-top-left-radius: 2rem;
-	/* <q> tag is an inline element unline <blockquote> */
 	display: block;
-	background-color: var(--accentcolour);
-	position: sticky;
-	top: 4rem;
+	background-color: var(--primarycolour);
+	color: var(--textcolour);
+	font-size: var(--reference-size);
+	inline-size: max-content;
+	margin-block-start: var(--page-start) ;
+	padding-inline: var(--base-spacing);
+	border-top-left-radius: var(--base-spacing);
+	border-end-end-radius: var(--base-spacing);
 
 }
 
