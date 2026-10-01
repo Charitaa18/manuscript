@@ -50,6 +50,8 @@
 body {
 
 	background-color: var(--background);
+	color: var(--textcolour);
+	font-size: var(--body-size);
 	font-family: var(--text-typeface);
 	font-weight: var(--regular-wt);
 	line-height:var(--regular-leading);
@@ -95,26 +97,25 @@ h2, h3 {
 	line-height: var(--relaxed-leading);
 	max-inline-size: var(--heading-width);
 	margin-block-start: var(--page-start);
+	margin-block-end: var(--section-spacing);
 	text-transform: uppercase;
-	/* text-align: center; */
 
 }
 
 h2 {
 
 	font-size: var(--heading-size);
-	margin-block-end: var(--section-spacing);
 
 }
 
 h3 {
 
 	font-size: var(--subheading-size);
-	margin-block-end: var(--section-spacing);
 
 }
 
-h2::after {
+h2::after,
+h3::after {
 
 	content: "";
 	display: block;
@@ -125,22 +126,8 @@ h2::after {
 
 }
 
-h3::after {
-
-	content: "";
-	display: block;
-	width: var(--heading-line-length);
-	border-top: 0.3rem solid var(--primarycolour);
-	margin-block-start: var(--section-spacing);
-	/* vertical-align: middle; */
-
-}
-
 section p {
 
-	font-family: var(--text-typeface);
-	font-size: var(--body-size);
-	color: var(--textcolour);
 	margin-inline-start: var(--content-start);
 	margin-block-start: var(--paragraph-spacing);
 	margin-block-end: var(--paragraph-spacing);
@@ -151,7 +138,6 @@ section p {
 .response p {
 
 	font-family: var(--response-typeface);
-	font-size: var(--body-size);
 	color: var(--primarycolour);
 	margin-block-start: var(--paragraph-spacing);
 	opacity: 20%;
@@ -166,10 +152,27 @@ section p {
 
 }
 
+blockquote p {
+
+	font-weight: var(--thin-wt);
+	font-style: italic;
+
+}
+
+.prologue p{
+
+	font-weight: var(--thin-wt);
+	/* color:grey; */
+	color: var(--secondarycolour);
+	font-size: var(--reference-size);
+	line-height: var(--tight-leading);
+	opacity: 60%;
+
+}
+
 a {
 
 	color: var(--primarycolour);
-	/* margin-inline-start: var(--content-indent); */
 	margin-block-end: var(--section-spacing);
 	margin-block-start: var(--paragraph-spacing);
 	text-decoration: underline;
@@ -184,10 +187,8 @@ a:hover {
 
 a.author {
 
-	color: var(--textcolour);
 	font-family: var(--heading-typeface);
 	font-size: var(--metadata-size);
-	/* margin-inline-start: var(--content-indent); */
 	margin-block-end: var(--paragraph-spacing);
 	text-transform: uppercase;
 
@@ -207,35 +208,10 @@ time {
 
 }
 
-
-blockquote p {
-
-	font-family: var(--text-typeface);
-	font-weight: var(--thin-wt);
-	color: var(--textcolour);
-	font-style: italic;
-
-}
-
-.prologue p{
-
-	font-family: var(--text-typeface);
-	font-weight: var(--thin-wt);
-	/* color:grey; */
-	color: var(--secondarycolour);
-	font-size: var(--reference-size);
-	line-height: var(--tight-leading);
-	opacity: 60%;
-
-}
-
 ul {
 
-	font-family: var(--text-typeface);
-	font-size: var(--body-size);
 	margin-inline-start: var(--content-start);
 	margin-inline-end: var(--content-end);
-	color: var(--textcolour);
 	list-style-type: disc;
 	/* text-wrap: balance; */
 	list-style-position: inside;
@@ -245,36 +221,26 @@ ul {
 ol {
 
 	list-style-type: none;
-	font-family: var(--text-typeface);
-	font-size: var(--body-size);
-	color: var(--textcolour);
 
 }
 
 strong {
 
-	font-family: var(--text-typeface);
 	color: var(--secondarycolour);
-	font-weight:var(--medium-wt);
-	font-style: bold;
+	font-weight:var(--bold-wt);
 	text-transform: uppercase;
 
 }
 
 .reference {
 
-	font-family: var(--text-typeface);
-	font-weight: var(--medium-wt);
-	font-size: var(--body-size);
+	font-weight: var(--thin-wt);
 	font-style: bold;
 
 }
 
  em, cite {
 
-	font-family: var(--text-typeface);
-	font-weight: calc(3*var(--base-text-weight));
-	font-size: var(--body-size);
 	color: var(--secondarycolour);
 	font-style: italic;
 
@@ -288,25 +254,23 @@ strong {
 
 sup {
 
-	font-weight: calc(3*var(--base-text-weight));
+	font-weight: var(--thin-wt);
 	font-size: var(--base-text-size);
-	color: var(--textcolour);
 	vertical-align: super;
 
 }
 
-span {
+span:not(.author) {
 
-	/* color: var(--textcolour);
-	font-weight: calc(2*var(--base-text-weight)); */
+	font-weight: var(--thin-wt);
 	font-size: var(--reference-size);
+	color: var(--textcolour);
 
 }
 
 span .author {
 
-	color: var(--textcolour);
-	font-weight: calc(6*var(--base-text-weight));
+	font-weight: var(--bold-wt);
 	font-size: var(--reference-size);
 
 }
@@ -319,19 +283,15 @@ q {
 
 .response q{
 
-	font-family: var(--text-typeface);
-	font-size: var(--body-size);
-	font-weight: var(--regular-wt);
-	color: var(--textcolour);
-	margin-inline-start: var(--content-indent);
-	margin-inline-end: var(--content-end);
-	margin-block-start: calc(2*var(--section-spacing));
+	margin-inline: var(--content-indent);
+	margin-block-start: var(--page-start);
 	margin-block-end: var(--section-spacing);
-	padding-inline-start: calc(5.5*var(--section-spacing));
+	text-align: center;
 	padding-block-start: var(--paragraph-spacing);
 	padding-block-end: var(--paragraph-spacing);
 	border-end-end-radius: 2rem;
 	border-top-left-radius: 2rem;
+	/* <q> tag is an inline element unline <blockquote> */
 	display: block;
 	background-color: var(--accentcolour);
 	position: sticky;
