@@ -41,8 +41,6 @@
 --heading-width: calc(40*var(--base-spacing));
 --content-start: calc(var(--reading-width)/2);
 --heading-line-length: var(--reading-width);
-/* inset */
---inset: calc(3*var(--base-spacing));
 
 }
 
